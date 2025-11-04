@@ -35,9 +35,7 @@ const formData = ref<FormGeneratorData | null>(null)
 
 <template>
   <div class="min-h-dvh p-10 flex flex-col gap-5 items-center justify-center bg-blue-100">
-    <span v-show="formData" class="text-center text-xs text-background">
-      Данные формы: <br />{{ formData }}
-    </span>
+    <span v-show="formData" class="text-center text-xs"> Данные формы: <br />{{ formData }} </span>
     <FormGenerator :schema="response.fields" v-model="formData" />
   </div>
 </template>
